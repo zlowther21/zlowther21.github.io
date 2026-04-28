@@ -1,3 +1,129 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8"><title>zlowther21</title></head>
-<body><p>OK</p></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Financier — Personal Finance Ledger</title>
+<meta name="description" content="Financier is a privacy-first, single-user personal finance ledger for iOS. Self-hosted backend, on-device AI, no third-party data sharing.">
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+    background: #F5F1EA;
+    color: #2A2925;
+    margin: 0;
+    padding: 32px 20px;
+    line-height: 1.55;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { background: #1A1814; color: #F2EEE5; }
+    .card { background: #23211C; }
+    .secondary, .caption { color: #A29B8A; }
+    .divider { background: #2F2C25; }
+    a { color: #7BA688; }
+  }
+  main {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #837E73;
+    margin-bottom: 8px;
+  }
+  h1 {
+    font-family: ui-rounded, "SF Pro Rounded", -apple-system, sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    margin: 0 0 8px;
+  }
+  .lede {
+    font-size: 17px;
+    color: #2A2925;
+    margin: 0 0 28px;
+  }
+  .secondary { color: #837E73; }
+  .card {
+    background: #FBF8F2;
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin: 12px 0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  }
+  .card h2 {
+    font-family: ui-rounded, "SF Pro Rounded", -apple-system, sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0 0 6px;
+  }
+  .card p {
+    margin: 0;
+    font-size: 14px;
+    color: #837E73;
+  }
+  .divider {
+    height: 1px;
+    background: #E5DFD2;
+    margin: 32px 0;
+    border: none;
+  }
+  .meta {
+    font-size: 13px;
+    color: #837E73;
+    line-height: 1.7;
+  }
+  .meta strong {
+    color: #2A2925;
+    font-weight: 500;
+  }
+  a { color: #5A8765; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .caption {
+    font-size: 11px;
+    color: #837E73;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 40px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">iOS personal-finance app</div>
+  <h1>Financier</h1>
+  <p class="lede">A privacy-first personal finance ledger. Single-user, sideload-only, with a self-hosted backend on the user's home network and on-device AI via Apple Intelligence.</p>
+
+  <div class="card">
+    <h2>Read-only by design</h2>
+    <p>The app aggregates account balances, transactions, and liabilities. It cannot transfer money, initiate payments, or modify any data at the bank. Plaid's read-only product scopes (transactions, liabilities) are the only ones requested.</p>
+  </div>
+
+  <div class="card">
+    <h2>No third-party data sharing</h2>
+    <p>Bank data flows: bank → Plaid → user's self-hosted backend → user's iPhone. The backend runs on the user's hardware. The iPhone uses CloudKit's private database (visible only to the user's Apple ID). No analytics, no telemetry, no third-party cloud.</p>
+  </div>
+
+  <div class="card">
+    <h2>Encryption at rest</h2>
+    <p>Plaid access tokens on the backend are stored in an age-encrypted file. The iPhone uses iOS Data Protection (Complete) for all SwiftData state. The TLS channel between the iPhone and the backend is pinned via SHA-256 of the leaf certificate.</p>
+  </div>
+
+  <hr class="divider">
+
+  <div class="meta">
+    <p><strong>Distribution:</strong> Sideloaded to the developer's own iPhone via Xcode using a paid Apple Developer profile. Not on the App Store. No external users.</p>
+    <p><strong>Source:</strong> private repository (not publicly available).</p>
+  </div>
+
+  <p class="caption">© 2026 Z. Lowther</p>
+</main>
+</body>
+</html>
