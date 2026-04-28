@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["XT9KEA8Y2R.com.zlowther.financier"],
+        "components": [
+          {
+            "/": "/financier-oauth/return*"
+          }
+        ]
+      }
+    ]
+  }
+}
